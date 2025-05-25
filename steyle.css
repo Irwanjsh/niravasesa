@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images.unsplash.com/photo-1604395954700-62f9028e6f8c');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Header dengan background image */
+header {
+    background-image: url('bareng.jpg'); /* Ganti sesuai nama file foto kamu */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Overlay gelap agar teks tetap terbaca */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 100, 0, 0.322);
+    z-index: 0;
+}
+
+header * {
+    position: relative;
+    z-index: 1;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* NAVIGASI */
+nav {
+    background-color: rgba(22, 160, 79, 0.9);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    background-color: #5fe07b;
+    transform: scale(1.05);
+}
+
+nav a.active {
+    background-color: #6ae05f;
+}
+
+section {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(44, 62, 80, 0.9);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Galeri Responsif */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* ==== RESPONSIF UNTUK LAYAR KECIL ==== */
+@media (max-width: 768px) {
+    header {
+        padding: 40px 10px;
+    }
+
+    header img {
+        width: 80px;
+    }
+
+    nav {
+        padding: 8px 0;
+    }
+
+    nav a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .gallery {
+        gap: 10px;
+    }
+
+    .gallery img {
+        max-width: 90%;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+}
